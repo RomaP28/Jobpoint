@@ -1,0 +1,437 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.burger_menu {
+  @extend %burger_menu;
+}
+
+.nav {
+  @extend %nav;
+}
+
+
+///////////////////////////================HEADER=================//////////////////////////////////////
+.header {
+  .container {
+    width: 1120px;
+    margin: 0 auto;
+  }
+}
+
+///////////////////----------------MESSAGE----------------//////////////////////////
+.messagebox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-tertiary;
+  height: 100px;
+  border-radius: 20px;
+  position: relative;
+
+  span {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  h5 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+    padding-right: 5px;
+  }
+}
+
+.messagebox__photo {
+  position: absolute;
+  margin: 12px;
+}
+
+///////////////////----------------SECTION----------------//////////////////////////
+
+.section {
+  width: 100%;
+  margin-top: 100px;
+}
+
+////////////////////////////////----------------------SECTION-----------------////////////////////////////
+
+.section__main {
+  width: 100%;
+
+  .container {
+    width: 1120px;
+    margin: 0 auto;
+  }
+}
+
+.main__nav {
+  width: 38%;
+  min-width: 360px;
+  margin: 60px auto 40px;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      height: 28px;
+    }
+  }
+}
+
+.main__nav--active {
+  text-decoration: underline;
+}
+
+.main__content {
+  display: flex;
+}
+
+/////////////////////////////////////---------------LEFT NAVIGATION------------//////////////////////
+.cabinet__nav {
+  flex: 19%;
+  height: 364px;
+  box-shadow: 0px 0px 20px $color-shadow;
+  border-radius: 20px;
+  background-image: url(../../../img/cabinet/businessman-working-on-laptop3.png);
+  background-position: bottom, left;
+  background-repeat: no-repeat;
+  height: 364px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    height: 260px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 46px 19px;
+
+    @media (max-width: 1169px) {
+      padding: 0;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.cabinet__nav--active {
+  text-decoration: underline;
+}
+
+// .nav__bg {
+//   box-shadow: 0px 0px 20px $color-shadow;
+//   border-radius: 20px;
+//   background-image: url(../../../img/cabinet/businessman-working-on-laptop3.png);
+//   background-position: bottom, left;
+//   background-repeat: no-repeat;
+//   height: 364px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+
+/////////////////////////////////////---------------CENTER CONTENT------------//////////////////////
+.cabinet__content {
+  flex: 62%;
+}
+
+.jobs__item {
+  @extend %card;
+  margin: 0 auto 24px;
+}
+
+.jobs__viewAll {
+  @extend %view_all;
+}
+
+/////////////////////////////////////---------------RIGHT FILTER------------//////////////////////
+.cabinet__filter {
+  flex: 19%;
+
+  h3 {
+    margin-left: 10%;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.filter {
+  margin-top: 16px;
+  margin-left: 10%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h6 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.filter input {
+  margin-right: 10px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox+label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.amount {
+  margin-left: -3px;
+  display: inline;
+  background-color: #D7D7D7;
+  color: white;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: center;
+  vertical-align: text-top;
+  border-radius: 50%;
+  font-size: 8px;
+  padding: 1.34px 3.68px;
+  // font-size: 10px;
+  // padding: 3px 4.8px;
+}
+
+._lock {
+  overflow: hidden;
+}
+
+
+////////////////////----------------MEDIA----------------////////////////////////////
+
+@media (max-width: 1169px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .messagebox {
+    h5 {
+      align-self: end;
+      margin-right: 7%;
+      font-size: 15px;
+    }
+  }
+
+  .jobs__item {
+    width: 90%;
+    position: relative;
+  }
+
+  .item__header {
+    flex-direction: column;
+  }
+
+  .item__header--img {
+    margin: 0 auto;
+  }
+
+  .item__header--container {
+    width: 100%;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item__header--title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .item__header--featured {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+
+  }
+
+  .item__header--star {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .item__header--details {
+    display: block;
+
+    p {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 390px;
+  }
+
+  .messagebox {
+    margin-top: 90px;
+    width: 100%;
+    flex-direction: row;
+
+    h5 {
+      align-self: center;
+      margin: 0;
+      width: 70%;
+    }
+  }
+
+  .messagebox__photo {
+    position: static;
+  }
+
+  .main__nav {
+    min-width: 100%;
+    margin: 30px auto;
+  }
+
+  .main__content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cabinet__filter {
+    order: 1;
+    margin-bottom: 20px;
+    flex: 100%;
+  }
+
+  .filter__categories {
+    display: flex;
+  }
+
+  .cabinet__content {
+    order: 2;
+    flex: 100%;
+  }
+
+  .jobs__item {
+    width: 90%;
+  }
+
+  .item__header {
+    flex-direction: column;
+  }
+
+  .item__header--img {
+    margin: 0 auto;
+  }
+
+  .item__header--container {
+    width: 100%;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item__header--title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cabinet__nav {
+    order: 3;
+    flex: 100%;
+    background-image: none;
+    box-shadow: none;
+    border-radius: unset;
+
+    ul {
+      background-color: #FFF;
+      backdrop-filter: none;
+    }
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .container {
+    max-width: 390px;
+  }
+
+  .messagebox {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 389px) {
+  .container {
+    max-width: 280px;
+  }
+
+  .main__nav {
+    width: 40%;
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+
+
+  .jobs__item {
+    width: 100%;
+  }
+}
